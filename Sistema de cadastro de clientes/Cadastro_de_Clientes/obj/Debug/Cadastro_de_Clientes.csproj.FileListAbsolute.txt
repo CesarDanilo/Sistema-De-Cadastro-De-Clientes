@@ -1,0 +1,11 @@
+C:\Users\cesar.SEXTAFEIRA\OneDrive\Área de Trabalho\Sistema de cadastro de clientes\Cadastro_de_Clientes\bin\Debug\Cadastro_de_Clientes.exe.config
+C:\Users\cesar.SEXTAFEIRA\OneDrive\Área de Trabalho\Sistema de cadastro de clientes\Cadastro_de_Clientes\bin\Debug\Cadastro_de_Clientes.exe
+C:\Users\cesar.SEXTAFEIRA\OneDrive\Área de Trabalho\Sistema de cadastro de clientes\Cadastro_de_Clientes\bin\Debug\Cadastro_de_Clientes.pdb
+C:\Users\cesar.SEXTAFEIRA\OneDrive\Área de Trabalho\Sistema de cadastro de clientes\Cadastro_de_Clientes\obj\Debug\Cadastro_de_Clientes.csproj.AssemblyReference.cache
+C:\Users\cesar.SEXTAFEIRA\OneDrive\Área de Trabalho\Sistema de cadastro de clientes\Cadastro_de_Clientes\obj\Debug\Cadastro_de_Clientes.csproj.SuggestedBindingRedirects.cache
+C:\Users\cesar.SEXTAFEIRA\OneDrive\Área de Trabalho\Sistema de cadastro de clientes\Cadastro_de_Clientes\obj\Debug\Cadastro_de_Clientes.Form1.resources
+C:\Users\cesar.SEXTAFEIRA\OneDrive\Área de Trabalho\Sistema de cadastro de clientes\Cadastro_de_Clientes\obj\Debug\Cadastro_de_Clientes.Properties.Resources.resources
+C:\Users\cesar.SEXTAFEIRA\OneDrive\Área de Trabalho\Sistema de cadastro de clientes\Cadastro_de_Clientes\obj\Debug\Cadastro_de_Clientes.csproj.GenerateResource.cache
+C:\Users\cesar.SEXTAFEIRA\OneDrive\Área de Trabalho\Sistema de cadastro de clientes\Cadastro_de_Clientes\obj\Debug\Cadastro_de_Clientes.csproj.CoreCompileInputs.cache
+C:\Users\cesar.SEXTAFEIRA\OneDrive\Área de Trabalho\Sistema de cadastro de clientes\Cadastro_de_Clientes\obj\Debug\Cadastro_de_Clientes.exe
+C:\Users\cesar.SEXTAFEIRA\OneDrive\Área de Trabalho\Sistema de cadastro de clientes\Cadastro_de_Clientes\obj\Debug\Cadastro_de_Clientes.pdb
