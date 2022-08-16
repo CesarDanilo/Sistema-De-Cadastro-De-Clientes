@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
@@ -35,42 +38,59 @@
             this.btn_search = new System.Windows.Forms.Button();
             this.tbx_id = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbx_name = new System.Windows.Forms.TextBox();
+            this.tbx_name_search = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbx_nome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbx_sexo = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbx_cpf_cnpf = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.tbx_contato = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.tbx_email = new System.Windows.Forms.TextBox();
+            this.mkx_data_nacimento = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbx_tipo = new System.Windows.Forms.ComboBox();
+            this.cbx_ativo = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbx_rua = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbx_numero = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.mkx_cep = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cbx_uf = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbx_bairro = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbx_cidade = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txt_descricao = new System.Windows.Forms.RichTextBox();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF_CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.data_cadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,6 +103,7 @@
             this.btn_save.TabIndex = 0;
             this.btn_save.Text = "TO SAVE";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_update
             // 
@@ -99,17 +120,46 @@
             this.btn_delete.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.Location = new System.Drawing.Point(1221, 607);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(117, 56);
+            this.btn_delete.Size = new System.Drawing.Size(130, 56);
             this.btn_delete.TabIndex = 2;
             this.btn_delete.Text = "DELETE";
             this.btn_delete.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.nome,
+            this.idade,
+            this.email,
+            this.CPF_CNPJ,
+            this.contato,
+            this.sexo,
+            this.data_cadastro,
+            this.tipo,
+            this.ativo,
+            this.cidade,
+            this.bairro,
+            this.rua,
+            this.numero,
+            this.uf,
+            this.cep,
+            this.descricao});
             this.dataGridView1.Location = new System.Drawing.Point(12, 61);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1327, 219);
+            this.dataGridView1.Size = new System.Drawing.Size(1340, 219);
             this.dataGridView1.TabIndex = 3;
             // 
             // btn_search
@@ -117,7 +167,7 @@
             this.btn_search.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_search.Location = new System.Drawing.Point(1252, 12);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(87, 43);
+            this.btn_search.Size = new System.Drawing.Size(100, 43);
             this.btn_search.TabIndex = 4;
             this.btn_search.Text = "SEARCH";
             this.btn_search.UseVisualStyleBackColor = true;
@@ -140,13 +190,13 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "ID";
             // 
-            // tbx_name
+            // tbx_name_search
             // 
-            this.tbx_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_name.Location = new System.Drawing.Point(901, 21);
-            this.tbx_name.Name = "tbx_name";
-            this.tbx_name.Size = new System.Drawing.Size(345, 26);
-            this.tbx_name.TabIndex = 7;
+            this.tbx_name_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_name_search.Location = new System.Drawing.Point(901, 21);
+            this.tbx_name_search.Name = "tbx_name_search";
+            this.tbx_name_search.Size = new System.Drawing.Size(345, 26);
+            this.tbx_name_search.TabIndex = 7;
             // 
             // label2
             // 
@@ -158,13 +208,13 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Nome";
             // 
-            // textBox1
+            // tbx_nome
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(68, 359);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(593, 26);
-            this.textBox1.TabIndex = 9;
+            this.tbx_nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_nome.Location = new System.Drawing.Point(68, 359);
+            this.tbx_nome.Name = "tbx_nome";
+            this.tbx_nome.Size = new System.Drawing.Size(446, 26);
+            this.tbx_nome.TabIndex = 9;
             // 
             // label3
             // 
@@ -180,41 +230,41 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1167, 361);
+            this.label4.Location = new System.Drawing.Point(1036, 361);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 21);
+            this.label4.Size = new System.Drawing.Size(190, 21);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Idade";
+            this.label4.Text = "Data de Nascimento";
             // 
-            // comboBox1
+            // cbx_sexo
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Roboto Mono Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbx_sexo.Font = new System.Drawing.Font("Roboto Mono Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_sexo.FormattingEnabled = true;
+            this.cbx_sexo.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.comboBox1.Location = new System.Drawing.Point(745, 359);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(42, 28);
-            this.comboBox1.TabIndex = 14;
+            this.cbx_sexo.Location = new System.Drawing.Point(619, 359);
+            this.cbx_sexo.Name = "cbx_sexo";
+            this.cbx_sexo.Size = new System.Drawing.Size(42, 28);
+            this.cbx_sexo.TabIndex = 14;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(805, 361);
+            this.label6.Location = new System.Drawing.Point(689, 361);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 21);
             this.label6.TabIndex = 16;
             this.label6.Text = "CPF/CNPJ";
             // 
-            // textBox3
+            // tbx_cpf_cnpf
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(901, 359);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(245, 26);
-            this.textBox3.TabIndex = 17;
+            this.tbx_cpf_cnpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_cpf_cnpf.Location = new System.Drawing.Point(785, 356);
+            this.tbx_cpf_cnpf.Name = "tbx_cpf_cnpf";
+            this.tbx_cpf_cnpf.Size = new System.Drawing.Size(245, 26);
+            this.tbx_cpf_cnpf.TabIndex = 17;
             // 
             // label8
             // 
@@ -226,16 +276,16 @@
             this.label8.TabIndex = 19;
             this.label8.Text = "Tel/Cel";
             // 
-            // maskedTextBox1
+            // tbx_contato
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Roboto Mono Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(98, 411);
-            this.maskedTextBox1.Mask = "(99) 00000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(157, 29);
-            this.maskedTextBox1.TabIndex = 20;
-            this.maskedTextBox1.Tag = "";
-            this.maskedTextBox1.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.tbx_contato.Font = new System.Drawing.Font("Roboto Mono Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_contato.Location = new System.Drawing.Point(98, 411);
+            this.tbx_contato.Mask = "(99) 00000-0000";
+            this.tbx_contato.Name = "tbx_contato";
+            this.tbx_contato.Size = new System.Drawing.Size(157, 29);
+            this.tbx_contato.TabIndex = 20;
+            this.tbx_contato.Tag = "";
+            this.tbx_contato.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label9
             // 
@@ -247,30 +297,30 @@
             this.label9.TabIndex = 21;
             this.label9.Text = "E-Mail";
             // 
-            // textBox4
+            // tbx_email
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(352, 412);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(309, 26);
-            this.textBox4.TabIndex = 22;
+            this.tbx_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_email.Location = new System.Drawing.Point(352, 412);
+            this.tbx_email.Name = "tbx_email";
+            this.tbx_email.Size = new System.Drawing.Size(309, 26);
+            this.tbx_email.TabIndex = 22;
             // 
-            // maskedTextBox2
+            // mkx_data_nacimento
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Roboto Mono Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(1233, 356);
-            this.maskedTextBox2.Mask = "00-00-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(106, 29);
-            this.maskedTextBox2.TabIndex = 23;
-            this.maskedTextBox2.Tag = "";
-            this.maskedTextBox2.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mkx_data_nacimento.Font = new System.Drawing.Font("Roboto Mono Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkx_data_nacimento.Location = new System.Drawing.Point(1232, 356);
+            this.mkx_data_nacimento.Mask = "00-00-0000";
+            this.mkx_data_nacimento.Name = "mkx_data_nacimento";
+            this.mkx_data_nacimento.Size = new System.Drawing.Size(119, 29);
+            this.mkx_data_nacimento.TabIndex = 23;
+            this.mkx_data_nacimento.Tag = "";
+            this.mkx_data_nacimento.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(690, 361);
+            this.label5.Location = new System.Drawing.Point(564, 361);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 21);
             this.label5.TabIndex = 24;
@@ -306,29 +356,29 @@
             this.label12.TabIndex = 27;
             this.label12.Text = "Tipo: ";
             // 
-            // comboBox2
+            // cbx_tipo
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Roboto Mono Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbx_tipo.Font = new System.Drawing.Font("Roboto Mono Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_tipo.FormattingEnabled = true;
+            this.cbx_tipo.Items.AddRange(new object[] {
             "Física ",
             "Jurídica "});
-            this.comboBox2.Location = new System.Drawing.Point(1093, 410);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(101, 28);
-            this.comboBox2.TabIndex = 28;
+            this.cbx_tipo.Location = new System.Drawing.Point(1093, 410);
+            this.cbx_tipo.Name = "cbx_tipo";
+            this.cbx_tipo.Size = new System.Drawing.Size(101, 28);
+            this.cbx_tipo.TabIndex = 28;
             // 
-            // comboBox3
+            // cbx_ativo
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Roboto Mono Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.comboBox3.Location = new System.Drawing.Point(1282, 412);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(57, 28);
-            this.comboBox3.TabIndex = 30;
+            this.cbx_ativo.Font = new System.Drawing.Font("Roboto Mono Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_ativo.FormattingEnabled = true;
+            this.cbx_ativo.Items.AddRange(new object[] {
+            "Ativo",
+            "Não ativo"});
+            this.cbx_ativo.Location = new System.Drawing.Point(1282, 412);
+            this.cbx_ativo.Name = "cbx_ativo";
+            this.cbx_ativo.Size = new System.Drawing.Size(70, 28);
+            this.cbx_ativo.TabIndex = 30;
             // 
             // label13
             // 
@@ -372,13 +422,13 @@
             this.label15.TabIndex = 34;
             this.label15.Text = "Rua:";
             // 
-            // textBox2
+            // tbx_rua
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(69, 527);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 26);
-            this.textBox2.TabIndex = 33;
+            this.tbx_rua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_rua.Location = new System.Drawing.Point(69, 527);
+            this.tbx_rua.Name = "tbx_rua";
+            this.tbx_rua.Size = new System.Drawing.Size(210, 26);
+            this.tbx_rua.TabIndex = 33;
             // 
             // label16
             // 
@@ -390,13 +440,13 @@
             this.label16.TabIndex = 36;
             this.label16.Text = "N°:";
             // 
-            // textBox5
+            // tbx_numero
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(352, 527);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(76, 26);
-            this.textBox5.TabIndex = 35;
+            this.tbx_numero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_numero.Location = new System.Drawing.Point(352, 527);
+            this.tbx_numero.Name = "tbx_numero";
+            this.tbx_numero.Size = new System.Drawing.Size(76, 26);
+            this.tbx_numero.TabIndex = 35;
             // 
             // label18
             // 
@@ -408,16 +458,16 @@
             this.label18.TabIndex = 38;
             this.label18.Text = "CEP:";
             // 
-            // maskedTextBox3
+            // mkx_cep
             // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Roboto Mono Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(68, 573);
-            this.maskedTextBox3.Mask = "00000-000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(98, 29);
-            this.maskedTextBox3.TabIndex = 39;
-            this.maskedTextBox3.Tag = "";
-            this.maskedTextBox3.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mkx_cep.Font = new System.Drawing.Font("Roboto Mono Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkx_cep.Location = new System.Drawing.Point(68, 573);
+            this.mkx_cep.Mask = "00000-000";
+            this.mkx_cep.Name = "mkx_cep";
+            this.mkx_cep.Size = new System.Drawing.Size(98, 29);
+            this.mkx_cep.TabIndex = 39;
+            this.mkx_cep.Tag = "";
+            this.mkx_cep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label17
             // 
@@ -429,11 +479,11 @@
             this.label17.TabIndex = 40;
             this.label17.Text = "UF:";
             // 
-            // comboBox4
+            // cbx_uf
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Roboto Mono Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cbx_uf.Font = new System.Drawing.Font("Roboto Mono Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_uf.FormattingEnabled = true;
+            this.cbx_uf.Items.AddRange(new object[] {
             "RO",
             "AC",
             "AM",
@@ -461,10 +511,10 @@
             "MT",
             "GO",
             "DF"});
-            this.comboBox4.Location = new System.Drawing.Point(285, 574);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(61, 28);
-            this.comboBox4.TabIndex = 41;
+            this.cbx_uf.Location = new System.Drawing.Point(285, 574);
+            this.cbx_uf.Name = "cbx_uf";
+            this.cbx_uf.Size = new System.Drawing.Size(61, 28);
+            this.cbx_uf.TabIndex = 41;
             // 
             // label19
             // 
@@ -476,13 +526,13 @@
             this.label19.TabIndex = 43;
             this.label19.Text = "Bairro:";
             // 
-            // textBox6
+            // tbx_bairro
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(480, 576);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(181, 26);
-            this.textBox6.TabIndex = 42;
+            this.tbx_bairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_bairro.Location = new System.Drawing.Point(480, 576);
+            this.tbx_bairro.Name = "tbx_bairro";
+            this.tbx_bairro.Size = new System.Drawing.Size(181, 26);
+            this.tbx_bairro.TabIndex = 42;
             // 
             // label20
             // 
@@ -494,13 +544,13 @@
             this.label20.TabIndex = 45;
             this.label20.Text = "Cidade:";
             // 
-            // textBox7
+            // tbx_cidade
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(520, 529);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(141, 26);
-            this.textBox7.TabIndex = 44;
+            this.tbx_cidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_cidade.Location = new System.Drawing.Point(520, 529);
+            this.tbx_cidade.Name = "tbx_cidade";
+            this.tbx_cidade.Size = new System.Drawing.Size(141, 26);
+            this.tbx_cidade.TabIndex = 44;
             // 
             // label21
             // 
@@ -513,57 +563,146 @@
             this.label21.TabIndex = 46;
             this.label21.Text = "Descrição:";
             // 
-            // richTextBox1
+            // txt_descricao
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Font = new System.Drawing.Font("Roboto Mono Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(694, 516);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(645, 86);
-            this.richTextBox1.TabIndex = 47;
-            this.richTextBox1.Text = "";
+            this.txt_descricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_descricao.Font = new System.Drawing.Font("Roboto Mono Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_descricao.Location = new System.Drawing.Point(694, 516);
+            this.txt_descricao.Name = "txt_descricao";
+            this.txt_descricao.Size = new System.Drawing.Size(658, 86);
+            this.txt_descricao.TabIndex = 47;
+            this.txt_descricao.Text = "";
+            this.txt_descricao.TextChanged += new System.EventHandler(this.cbx_tipo_TextChanged);
+            // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
+            // 
+            // nome
+            // 
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            // 
+            // idade
+            // 
+            this.idade.HeaderText = "Data de Nascimento";
+            this.idade.Name = "idade";
+            // 
+            // email
+            // 
+            this.email.HeaderText = "E-mail";
+            this.email.Name = "email";
+            // 
+            // CPF_CNPJ
+            // 
+            this.CPF_CNPJ.HeaderText = "CPF/CNPJ";
+            this.CPF_CNPJ.Name = "CPF_CNPJ";
+            // 
+            // contato
+            // 
+            this.contato.HeaderText = "Tel/Cel";
+            this.contato.Name = "contato";
+            // 
+            // sexo
+            // 
+            this.sexo.HeaderText = "Sexo";
+            this.sexo.Name = "sexo";
+            // 
+            // data_cadastro
+            // 
+            this.data_cadastro.HeaderText = "Data de Cadastro";
+            this.data_cadastro.Name = "data_cadastro";
+            // 
+            // tipo
+            // 
+            this.tipo.HeaderText = "Tipo";
+            this.tipo.Name = "tipo";
+            // 
+            // ativo
+            // 
+            this.ativo.HeaderText = "Ativo";
+            this.ativo.Name = "ativo";
+            // 
+            // cidade
+            // 
+            this.cidade.HeaderText = "Cidade";
+            this.cidade.Name = "cidade";
+            // 
+            // bairro
+            // 
+            this.bairro.HeaderText = "Bairro";
+            this.bairro.Name = "bairro";
+            // 
+            // rua
+            // 
+            this.rua.HeaderText = "Rua";
+            this.rua.Name = "rua";
+            // 
+            // numero
+            // 
+            this.numero.HeaderText = "Número";
+            this.numero.Name = "numero";
+            // 
+            // uf
+            // 
+            this.uf.HeaderText = "UF";
+            this.uf.Name = "uf";
+            // 
+            // cep
+            // 
+            this.cep.HeaderText = "CEP";
+            this.cep.Name = "cep";
+            // 
+            // descricao
+            // 
+            this.descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.descricao.HeaderText = "Descrição";
+            this.descricao.Name = "descricao";
+            this.descricao.Width = 75;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1350, 675);
-            this.Controls.Add(this.richTextBox1);
+            this.ClientSize = new System.Drawing.Size(1364, 681);
+            this.Controls.Add(this.txt_descricao);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.tbx_cidade);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.tbx_bairro);
+            this.Controls.Add(this.cbx_uf);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.mkx_cep);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tbx_numero);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbx_rua);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cbx_ativo);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbx_tipo);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.mkx_data_nacimento);
+            this.Controls.Add(this.tbx_email);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.tbx_contato);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbx_cpf_cnpf);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbx_sexo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbx_nome);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbx_name);
+            this.Controls.Add(this.tbx_name_search);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbx_id);
             this.Controls.Add(this.btn_search);
@@ -571,7 +710,12 @@
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_save);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.MaximumSize = new System.Drawing.Size(1380, 720);
+            this.MinimumSize = new System.Drawing.Size(1380, 720);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -588,42 +732,59 @@
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.TextBox tbx_id;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbx_name;
+        private System.Windows.Forms.TextBox tbx_name_search;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbx_nome;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbx_sexo;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbx_cpf_cnpf;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox tbx_contato;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.TextBox tbx_email;
+        private System.Windows.Forms.MaskedTextBox mkx_data_nacimento;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbx_tipo;
+        private System.Windows.Forms.ComboBox cbx_ativo;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbx_rua;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbx_numero;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox mkx_cep;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cbx_uf;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbx_bairro;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbx_cidade;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txt_descricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPF_CNPJ;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contato;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn data_cadastro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ativo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bairro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rua;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cep;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
     }
 }
 
