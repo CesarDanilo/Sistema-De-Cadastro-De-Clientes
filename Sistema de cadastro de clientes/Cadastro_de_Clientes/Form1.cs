@@ -41,11 +41,47 @@ namespace Cadastro_de_Clientes
             {
                 conn.Close();
             }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+
+            string strconnection = "Database=CLIENTES_DB;Server=127.0.0.1;Uid=root;Pwd=root;";
+            MySqlConnection conn = new MySqlConnection(strconnection);
+
+            try
+            {
+                string query = "SELECT * FROM TB_CLIENTES;";
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, strconnection);
+                DataTable dt = new DataTable();
+
+                adapter.Fill(dt);
+
+                foreach (DataRow data in dt.Rows)
+                {
+                    dataGridView1.Rows.Add(data.ItemArray);
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
         }
 
         private void cbx_tipo_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }

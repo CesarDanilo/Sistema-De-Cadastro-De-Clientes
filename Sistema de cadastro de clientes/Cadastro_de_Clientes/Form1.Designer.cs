@@ -35,6 +35,23 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF_CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.data_cadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_search = new System.Windows.Forms.Button();
             this.tbx_id = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,23 +91,7 @@
             this.tbx_cidade = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txt_descricao = new System.Windows.Forms.RichTextBox();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPF_CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.data_cadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rua = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_connect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,6 +162,94 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1340, 219);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
+            // 
+            // nome
+            // 
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            // 
+            // idade
+            // 
+            this.idade.HeaderText = "Data de Nascimento";
+            this.idade.Name = "idade";
+            // 
+            // email
+            // 
+            this.email.HeaderText = "E-mail";
+            this.email.Name = "email";
+            // 
+            // CPF_CNPJ
+            // 
+            this.CPF_CNPJ.HeaderText = "CPF/CNPJ";
+            this.CPF_CNPJ.Name = "CPF_CNPJ";
+            // 
+            // contato
+            // 
+            this.contato.HeaderText = "Tel/Cel";
+            this.contato.Name = "contato";
+            // 
+            // sexo
+            // 
+            this.sexo.HeaderText = "Sexo";
+            this.sexo.Name = "sexo";
+            // 
+            // data_cadastro
+            // 
+            this.data_cadastro.HeaderText = "Data de Cadastro";
+            this.data_cadastro.Name = "data_cadastro";
+            // 
+            // tipo
+            // 
+            this.tipo.HeaderText = "Tipo";
+            this.tipo.Name = "tipo";
+            // 
+            // ativo
+            // 
+            this.ativo.HeaderText = "Ativo";
+            this.ativo.Name = "ativo";
+            // 
+            // cidade
+            // 
+            this.cidade.HeaderText = "Cidade";
+            this.cidade.Name = "cidade";
+            // 
+            // bairro
+            // 
+            this.bairro.HeaderText = "Bairro";
+            this.bairro.Name = "bairro";
+            // 
+            // rua
+            // 
+            this.rua.HeaderText = "Rua";
+            this.rua.Name = "rua";
+            // 
+            // numero
+            // 
+            this.numero.HeaderText = "Número";
+            this.numero.Name = "numero";
+            // 
+            // uf
+            // 
+            this.uf.HeaderText = "UF";
+            this.uf.Name = "uf";
+            // 
+            // cep
+            // 
+            this.cep.HeaderText = "CEP";
+            this.cep.Name = "cep";
+            // 
+            // descricao
+            // 
+            this.descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.descricao.HeaderText = "Descrição";
+            this.descricao.Name = "descricao";
+            this.descricao.Width = 75;
             // 
             // btn_search
             // 
@@ -574,99 +663,23 @@
             this.txt_descricao.Text = "";
             this.txt_descricao.TextChanged += new System.EventHandler(this.cbx_tipo_TextChanged);
             // 
-            // id
+            // btn_connect
             // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id.HeaderText = "Id";
-            this.id.Name = "id";
-            // 
-            // nome
-            // 
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            // 
-            // idade
-            // 
-            this.idade.HeaderText = "Data de Nascimento";
-            this.idade.Name = "idade";
-            // 
-            // email
-            // 
-            this.email.HeaderText = "E-mail";
-            this.email.Name = "email";
-            // 
-            // CPF_CNPJ
-            // 
-            this.CPF_CNPJ.HeaderText = "CPF/CNPJ";
-            this.CPF_CNPJ.Name = "CPF_CNPJ";
-            // 
-            // contato
-            // 
-            this.contato.HeaderText = "Tel/Cel";
-            this.contato.Name = "contato";
-            // 
-            // sexo
-            // 
-            this.sexo.HeaderText = "Sexo";
-            this.sexo.Name = "sexo";
-            // 
-            // data_cadastro
-            // 
-            this.data_cadastro.HeaderText = "Data de Cadastro";
-            this.data_cadastro.Name = "data_cadastro";
-            // 
-            // tipo
-            // 
-            this.tipo.HeaderText = "Tipo";
-            this.tipo.Name = "tipo";
-            // 
-            // ativo
-            // 
-            this.ativo.HeaderText = "Ativo";
-            this.ativo.Name = "ativo";
-            // 
-            // cidade
-            // 
-            this.cidade.HeaderText = "Cidade";
-            this.cidade.Name = "cidade";
-            // 
-            // bairro
-            // 
-            this.bairro.HeaderText = "Bairro";
-            this.bairro.Name = "bairro";
-            // 
-            // rua
-            // 
-            this.rua.HeaderText = "Rua";
-            this.rua.Name = "rua";
-            // 
-            // numero
-            // 
-            this.numero.HeaderText = "Número";
-            this.numero.Name = "numero";
-            // 
-            // uf
-            // 
-            this.uf.HeaderText = "UF";
-            this.uf.Name = "uf";
-            // 
-            // cep
-            // 
-            this.cep.HeaderText = "CEP";
-            this.cep.Name = "cep";
-            // 
-            // descricao
-            // 
-            this.descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.descricao.HeaderText = "Descrição";
-            this.descricao.Name = "descricao";
-            this.descricao.Width = 75;
+            this.btn_connect.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_connect.Location = new System.Drawing.Point(848, 608);
+            this.btn_connect.Name = "btn_connect";
+            this.btn_connect.Size = new System.Drawing.Size(119, 56);
+            this.btn_connect.TabIndex = 48;
+            this.btn_connect.Text = "Connect";
+            this.btn_connect.UseVisualStyleBackColor = true;
+            this.btn_connect.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1364, 681);
+            this.Controls.Add(this.btn_connect);
             this.Controls.Add(this.txt_descricao);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
@@ -785,6 +798,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn uf;
         private System.Windows.Forms.DataGridViewTextBoxColumn cep;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
+        private System.Windows.Forms.Button btn_connect;
     }
 }
 
