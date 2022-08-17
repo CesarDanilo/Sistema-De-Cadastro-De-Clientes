@@ -17,17 +17,25 @@ namespace Cadastro_de_Clientes
         public Form1()
         {
             InitializeComponent();
+            start_table();
         }
 
+        // SALVAR
         private void btn_save_Click(object sender, EventArgs e)
         {
+            #region string Connection
+
             string strconnection = "Database=CLIENTES_DB;Server=127.0.0.1;Uid=root;Pwd=root;";
             MySqlConnection conn = new MySqlConnection(strconnection);
+
+            #endregion
+
+            #region Insert
 
             try
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand($"INSERT INTO TB_CLIENTES VALUES (NULL, '{tbx_nome.Text}', '{mkx_data_nacimento.Text}', '{tbx_email.Text}', '{tbx_cpf_cnpf.Text}', '{tbx_contato.Text}', '{cbx_sexo.Text}', CURRENT_TIMESTAMP(), '{txt_descricao.Text}', '{cbx_ativo.Text}', '{tbx_cidade.Text}', '{tbx_bairro.Text}', '{tbx_rua.Text}', '{tbx_numero.Text}', '{cbx_uf.Text}', '{mkx_cep.Text}', '{txt_descricao.Text}');", conn);
+                MySqlCommand cmd = new MySqlCommand($"INSERT INTO TB_CLIENTES VALUES (NULL, '{tbx_nome.Text}', '{mkx_data_nacimento.Text}', '{tbx_email.Text}', '{tbx_cpf_cnpf.Text}', '{tbx_contato.Text}', '{cbx_sexo.Text}', CURRENT_TIMESTAMP(), '{cbx_tipo.Text}', '{cbx_ativo.Text}', '{tbx_cidade.Text}', '{tbx_bairro.Text}', '{tbx_rua.Text}', '{tbx_numero.Text}', '{cbx_uf.Text}', '{mkx_cep.Text}', '{txt_descricao.Text}');", conn);
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("cadastrado com Súcesso!");
@@ -36,21 +44,31 @@ namespace Cadastro_de_Clientes
             }catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                
             }
             finally
             {
                 conn.Close();
             }
 
+            #endregion
+
+            start_table();
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void start_table()
         {
             dataGridView1.Rows.Clear();
+
+            #region String Connection
 
             string strconnection = "Database=CLIENTES_DB;Server=127.0.0.1;Uid=root;Pwd=root;";
             MySqlConnection conn = new MySqlConnection(strconnection);
 
+            #endregion
+
+            #region SELECT
             try
             {
                 string query = "SELECT * FROM TB_CLIENTES;";
@@ -64,7 +82,7 @@ namespace Cadastro_de_Clientes
                 {
                     dataGridView1.Rows.Add(data.ItemArray);
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -74,6 +92,99 @@ namespace Cadastro_de_Clientes
             {
                 conn.Close();
             }
+            #endregion
+
+        }
+
+        // PESQUISAR
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            start_table();   
+        }
+
+        // DELETAR
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            #region String Connection
+
+            string strconnection = "Database=CLIENTES_DB;Server=127.0.0.1;Uid=root;Pwd=root;";
+            MySqlConnection conn = new MySqlConnection(strconnection);
+
+            #endregion
+
+            #region Delete
+
+            try
+            {
+                conn.Open();
+                string query = $"DELETE FROM TB_CLIENTES WHERE ID_CLIENTE = {tbx_id.Text}";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Deletado com Sucesso!");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            #endregion
+
+            start_table();
+        }
+
+        // ATUALIZAR
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            #region String Connection
+
+            string strconnection = "Database=CLIENTES_DB;Server=127.0.0.1;Uid=root;Pwd=root;";
+            MySqlConnection conn = new MySqlConnection(strconnection);
+
+            #endregion
+
+            #region Update
+
+            try
+            {
+                conn.Open();
+                string query = $"UPDATE TB_CLIENTES SET " +
+                    $"CLIENTE_NOME = '{tbx_nome.Text}', " +
+                    $"CLIENTE_IDADE = '{mkx_data_nacimento.Text}'," +
+                    $" CLIENTE_EMAIL = '{tbx_email.Text}', " +
+                    $" CLIENTE_CPF_CNPJ = '{tbx_cpf_cnpf.Text}', " +
+                    $" CLIENTE_CONTATO = '{tbx_contato.Text}', " +
+                    $" CLIENTE_SEXO = '{cbx_sexo.Text}', " +
+                    $" CLIENTE_TIPO ='{cbx_tipo.Text}', " +
+                    $" CLIENTE_ATIVO = '{cbx_ativo.Text}', " +
+                    $" CLIENTE_CIDADE = '{tbx_cidade.Text}'," +
+                    $" CLIENTE_BAIRRO = '{tbx_bairro.Text}', " +
+                    $" CLIENTE_RUA = '{tbx_rua.Text}'," +
+                    $" CLIENTE_NUMERO = '{tbx_numero.Text}', " +
+                    $" CLIENTE_UF = '{cbx_uf.Text}'," +
+                    $" CLIENTE_CEP = '{mkx_cep.Text}', " +
+                    $" CLIENTE_DESCRICAO = '{txt_descricao.Text}'" +
+                    $"WHERE ID_CLIENTE = {tbx_id.Text};";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Atualizado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            #endregion
+
 
         }
 
