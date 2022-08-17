@@ -99,7 +99,52 @@ namespace Cadastro_de_Clientes
         // PESQUISAR
         private void btn_search_Click(object sender, EventArgs e)
         {
-            start_table();   
+
+            if (tbx_id.Text == null)
+            {
+
+                dataGridView1.Rows.Clear();
+                #region String Connection
+
+                string strconnection = "Database=CLIENTES_DB;Server=127.0.0.1;Uid=root;Pwd=root;";
+                MySqlConnection conn = new MySqlConnection(strconnection);
+
+                #endregion
+
+                string query = $"SELECT * FROM TB_CLIENTES where CLIENTE_NOME = '{tbx_name_search.Text}';";
+
+                DataTable dt = new DataTable();
+                MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(query, strconnection);
+                mySqlDataAdapter.Fill(dt);
+
+                foreach (DataRow data in dt.Rows)
+                {
+                    dataGridView1.Rows.Add(data.ItemArray);
+                }
+            }
+            else
+            {
+                dataGridView1.Rows.Clear();
+                #region String Connection
+
+                string strconnection = "Database=CLIENTES_DB;Server=127.0.0.1;Uid=root;Pwd=root;";
+                MySqlConnection conn = new MySqlConnection(strconnection);
+
+                #endregion
+
+                string query = $"SELECT * FROM TB_CLIENTES where ID_CLIENTE = '{tbx_id.Text}';";
+
+                DataTable dt = new DataTable();
+                MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(query, strconnection);
+                mySqlDataAdapter.Fill(dt);
+
+                foreach (DataRow data in dt.Rows)
+                {
+                    dataGridView1.Rows.Add(data.ItemArray);
+                }
+            }
+
+
         }
 
         // DELETAR
@@ -185,6 +230,29 @@ namespace Cadastro_de_Clientes
 
             #endregion
 
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            #region String Connection
+
+            string strconnection = "Database=CLIENTES_DB;Server=127.0.0.1;Uid=root;Pwd=root;";
+            MySqlConnection conn = new MySqlConnection(strconnection);
+
+            #endregion
+
+            string query = $"SELECT * FROM TB_CLIENTES;";
+
+            DataTable dt = new DataTable();
+            MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(query, strconnection);
+            mySqlDataAdapter.Fill(dt);
+
+            foreach (DataRow data in dt.Rows)
+            {
+                dataGridView1.Rows.Add(data.ItemArray);
+            }
 
         }
 
