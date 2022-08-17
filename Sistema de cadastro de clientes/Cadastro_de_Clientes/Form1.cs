@@ -100,10 +100,9 @@ namespace Cadastro_de_Clientes
         private void btn_search_Click(object sender, EventArgs e)
         {
 
-            if (tbx_id.Text == null)
+            if (string.IsNullOrEmpty(tbx_id.Text))
             {
 
-                dataGridView1.Rows.Clear();
                 #region String Connection
 
                 string strconnection = "Database=CLIENTES_DB;Server=127.0.0.1;Uid=root;Pwd=root;";
@@ -111,10 +110,14 @@ namespace Cadastro_de_Clientes
 
                 #endregion
 
-                string query = $"SELECT * FROM TB_CLIENTES where CLIENTE_NOME = '{tbx_name_search.Text}';";
+                dataGridView1.Rows.Clear();
+
+
+                string query = $"SELECT * FROM TB_CLIENTES WHERE CLIENTE_NOME = '{tbx_name_search.Text}';";
 
                 DataTable dt = new DataTable();
                 MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(query, strconnection);
+
                 mySqlDataAdapter.Fill(dt);
 
                 foreach (DataRow data in dt.Rows)
@@ -122,7 +125,8 @@ namespace Cadastro_de_Clientes
                     dataGridView1.Rows.Add(data.ItemArray);
                 }
             }
-            else
+
+            if(!string.IsNullOrEmpty(tbx_id.Text))
             {
                 dataGridView1.Rows.Clear();
                 #region String Connection
@@ -142,8 +146,8 @@ namespace Cadastro_de_Clientes
                 {
                     dataGridView1.Rows.Add(data.ItemArray);
                 }
-            }
 
+            }
 
         }
 
