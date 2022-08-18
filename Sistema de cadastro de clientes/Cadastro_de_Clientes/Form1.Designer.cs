@@ -79,29 +79,29 @@
             this.cbx_ativo = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.tbx_rua = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.tbx_numero = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.mkx_cep = new System.Windows.Forms.MaskedTextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.cbx_uf = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.tbx_bairro = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.tbx_cidade = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txt_descricao = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.tbx_cidade = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.tbx_bairro = new System.Windows.Forms.TextBox();
+            this.cbx_uf = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.mkx_cep = new System.Windows.Forms.MaskedTextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tbx_numero = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tbx_rua = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_save
             // 
             this.btn_save.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Location = new System.Drawing.Point(1084, 914);
+            this.btn_save.Location = new System.Drawing.Point(74, 790);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(119, 56);
             this.btn_save.TabIndex = 0;
@@ -112,7 +112,7 @@
             // btn_update
             // 
             this.btn_update.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.Location = new System.Drawing.Point(1209, 914);
+            this.btn_update.Location = new System.Drawing.Point(199, 790);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(117, 56);
             this.btn_update.TabIndex = 1;
@@ -123,7 +123,7 @@
             // btn_delete
             // 
             this.btn_delete.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Location = new System.Drawing.Point(1696, 901);
+            this.btn_delete.Location = new System.Drawing.Point(744, 790);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(130, 56);
             this.btn_delete.TabIndex = 2;
@@ -346,7 +346,7 @@
             // btn_search
             // 
             this.btn_search.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.Location = new System.Drawing.Point(1252, 12);
+            this.btn_search.Location = new System.Drawing.Point(1603, 17);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(100, 43);
             this.btn_search.TabIndex = 4;
@@ -357,7 +357,7 @@
             // tbx_id
             // 
             this.tbx_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_id.Location = new System.Drawing.Point(793, 21);
+            this.tbx_id.Location = new System.Drawing.Point(1551, 26);
             this.tbx_id.Name = "tbx_id";
             this.tbx_id.Size = new System.Drawing.Size(46, 26);
             this.tbx_id.TabIndex = 5;
@@ -366,7 +366,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(757, 23);
+            this.label1.Location = new System.Drawing.Point(1515, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 21);
             this.label1.TabIndex = 6;
@@ -375,16 +375,16 @@
             // tbx_name_search
             // 
             this.tbx_name_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_name_search.Location = new System.Drawing.Point(901, 21);
+            this.tbx_name_search.Location = new System.Drawing.Point(1088, 27);
             this.tbx_name_search.Name = "tbx_name_search";
-            this.tbx_name_search.Size = new System.Drawing.Size(345, 26);
+            this.tbx_name_search.Size = new System.Drawing.Size(421, 26);
             this.tbx_name_search.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(845, 23);
+            this.label2.Location = new System.Drawing.Point(1032, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 21);
             this.label2.TabIndex = 8;
@@ -412,7 +412,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1641, 535);
+            this.label4.Location = new System.Drawing.Point(631, 659);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 21);
             this.label4.TabIndex = 11;
@@ -434,7 +434,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1080, 535);
+            this.label6.Location = new System.Drawing.Point(70, 659);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 21);
             this.label6.TabIndex = 16;
@@ -443,7 +443,7 @@
             // tbx_cpf_cnpf
             // 
             this.tbx_cpf_cnpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_cpf_cnpf.Location = new System.Drawing.Point(1176, 530);
+            this.tbx_cpf_cnpf.Location = new System.Drawing.Point(166, 654);
             this.tbx_cpf_cnpf.Name = "tbx_cpf_cnpf";
             this.tbx_cpf_cnpf.Size = new System.Drawing.Size(245, 26);
             this.tbx_cpf_cnpf.TabIndex = 17;
@@ -490,7 +490,7 @@
             // mkx_data_nacimento
             // 
             this.mkx_data_nacimento.Font = new System.Drawing.Font("Roboto Mono Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mkx_data_nacimento.Location = new System.Drawing.Point(1707, 530);
+            this.mkx_data_nacimento.Location = new System.Drawing.Point(697, 654);
             this.mkx_data_nacimento.Mask = "00-00-0000";
             this.mkx_data_nacimento.Name = "mkx_data_nacimento";
             this.mkx_data_nacimento.Size = new System.Drawing.Size(119, 29);
@@ -512,7 +512,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1080, 588);
+            this.label10.Location = new System.Drawing.Point(70, 712);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(190, 21);
             this.label10.TabIndex = 25;
@@ -522,7 +522,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(1276, 588);
+            this.label11.Location = new System.Drawing.Point(249, 712);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(110, 21);
             this.label11.TabIndex = 26;
@@ -532,7 +532,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(1445, 590);
+            this.label12.Location = new System.Drawing.Point(429, 712);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(70, 21);
             this.label12.TabIndex = 27;
@@ -545,7 +545,7 @@
             this.cbx_tipo.Items.AddRange(new object[] {
             "Física ",
             "Jurídica "});
-            this.cbx_tipo.Location = new System.Drawing.Point(1515, 586);
+            this.cbx_tipo.Location = new System.Drawing.Point(505, 710);
             this.cbx_tipo.Name = "cbx_tipo";
             this.cbx_tipo.Size = new System.Drawing.Size(101, 28);
             this.cbx_tipo.TabIndex = 28;
@@ -557,7 +557,7 @@
             this.cbx_ativo.Items.AddRange(new object[] {
             "Ativo",
             "Não ativo"});
-            this.cbx_ativo.Location = new System.Drawing.Point(1756, 586);
+            this.cbx_ativo.Location = new System.Drawing.Point(746, 710);
             this.cbx_ativo.Name = "cbx_ativo";
             this.cbx_ativo.Size = new System.Drawing.Size(70, 28);
             this.cbx_ativo.TabIndex = 30;
@@ -566,7 +566,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(1680, 588);
+            this.label13.Location = new System.Drawing.Point(670, 712);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(70, 21);
             this.label13.TabIndex = 29;
@@ -583,83 +583,74 @@
             this.label14.TabIndex = 31;
             this.label14.Text = "Cliente: ";
             // 
-            // label7
+            // label21
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Roboto Mono", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(70, 693);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(142, 28);
-            this.label7.TabIndex = 32;
-            this.label7.Text = "Endereço: ";
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Roboto Mono", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.DimGray;
+            this.label21.Location = new System.Drawing.Point(1079, 620);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(142, 28);
+            this.label21.TabIndex = 46;
+            this.label21.Text = "Descrição:";
             // 
-            // label15
+            // txt_descricao
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(71, 737);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(50, 21);
-            this.label15.TabIndex = 34;
-            this.label15.Text = "Rua:";
+            this.txt_descricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_descricao.Font = new System.Drawing.Font("Roboto Mono Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_descricao.Location = new System.Drawing.Point(1088, 660);
+            this.txt_descricao.Name = "txt_descricao";
+            this.txt_descricao.Size = new System.Drawing.Size(742, 186);
+            this.txt_descricao.TabIndex = 47;
+            this.txt_descricao.Text = "";
+            this.txt_descricao.TextChanged += new System.EventHandler(this.cbx_tipo_TextChanged);
             // 
-            // tbx_rua
+            // button1
             // 
-            this.tbx_rua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_rua.Location = new System.Drawing.Point(127, 735);
-            this.tbx_rua.Name = "tbx_rua";
-            this.tbx_rua.Size = new System.Drawing.Size(277, 26);
-            this.tbx_rua.TabIndex = 33;
+            this.button1.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1709, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 43);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "UPDATE";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label16
+            // label20
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(411, 737);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 21);
-            this.label16.TabIndex = 36;
-            this.label16.Text = "N°:";
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(1548, 531);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(80, 21);
+            this.label20.TabIndex = 61;
+            this.label20.Text = "Cidade:";
             // 
-            // tbx_numero
+            // tbx_cidade
             // 
-            this.tbx_numero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_numero.Location = new System.Drawing.Point(457, 735);
-            this.tbx_numero.Name = "tbx_numero";
-            this.tbx_numero.Size = new System.Drawing.Size(76, 26);
-            this.tbx_numero.TabIndex = 35;
+            this.tbx_cidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_cidade.Location = new System.Drawing.Point(1634, 531);
+            this.tbx_cidade.Name = "tbx_cidade";
+            this.tbx_cidade.Size = new System.Drawing.Size(192, 26);
+            this.tbx_cidade.TabIndex = 60;
             // 
-            // label18
+            // label19
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(70, 784);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(50, 21);
-            this.label18.TabIndex = 38;
-            this.label18.Text = "CEP:";
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(1508, 578);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(80, 21);
+            this.label19.TabIndex = 59;
+            this.label19.Text = "Bairro:";
             // 
-            // mkx_cep
+            // tbx_bairro
             // 
-            this.mkx_cep.Font = new System.Drawing.Font("Roboto Mono Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mkx_cep.Location = new System.Drawing.Point(126, 781);
-            this.mkx_cep.Mask = "00000-000";
-            this.mkx_cep.Name = "mkx_cep";
-            this.mkx_cep.Size = new System.Drawing.Size(98, 29);
-            this.mkx_cep.TabIndex = 39;
-            this.mkx_cep.Tag = "";
-            this.mkx_cep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(297, 784);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(40, 21);
-            this.label17.TabIndex = 40;
-            this.label17.Text = "UF:";
+            this.tbx_bairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_bairro.Location = new System.Drawing.Point(1594, 578);
+            this.tbx_bairro.Name = "tbx_bairro";
+            this.tbx_bairro.Size = new System.Drawing.Size(232, 26);
+            this.tbx_bairro.TabIndex = 58;
             // 
             // cbx_uf
             // 
@@ -693,89 +684,95 @@
             "MT",
             "GO",
             "DF"});
-            this.cbx_uf.Location = new System.Drawing.Point(390, 782);
+            this.cbx_uf.Location = new System.Drawing.Point(1399, 576);
             this.cbx_uf.Name = "cbx_uf";
             this.cbx_uf.Size = new System.Drawing.Size(61, 28);
-            this.cbx_uf.TabIndex = 41;
+            this.cbx_uf.TabIndex = 57;
             // 
-            // label19
+            // label17
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(499, 784);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(80, 21);
-            this.label19.TabIndex = 43;
-            this.label19.Text = "Bairro:";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(1306, 578);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(40, 21);
+            this.label17.TabIndex = 56;
+            this.label17.Text = "UF:";
             // 
-            // tbx_bairro
+            // mkx_cep
             // 
-            this.tbx_bairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_bairro.Location = new System.Drawing.Point(585, 784);
-            this.tbx_bairro.Name = "tbx_bairro";
-            this.tbx_bairro.Size = new System.Drawing.Size(289, 26);
-            this.tbx_bairro.TabIndex = 42;
+            this.mkx_cep.Font = new System.Drawing.Font("Roboto Mono Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkx_cep.Location = new System.Drawing.Point(1135, 575);
+            this.mkx_cep.Mask = "00000-000";
+            this.mkx_cep.Name = "mkx_cep";
+            this.mkx_cep.Size = new System.Drawing.Size(98, 29);
+            this.mkx_cep.TabIndex = 55;
+            this.mkx_cep.Tag = "";
+            this.mkx_cep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // label20
+            // label18
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(539, 737);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(80, 21);
-            this.label20.TabIndex = 45;
-            this.label20.Text = "Cidade:";
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(1079, 578);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(50, 21);
+            this.label18.TabIndex = 54;
+            this.label18.Text = "CEP:";
             // 
-            // tbx_cidade
+            // label16
             // 
-            this.tbx_cidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_cidade.Location = new System.Drawing.Point(625, 737);
-            this.tbx_cidade.Name = "tbx_cidade";
-            this.tbx_cidade.Size = new System.Drawing.Size(249, 26);
-            this.tbx_cidade.TabIndex = 44;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(1420, 531);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(40, 21);
+            this.label16.TabIndex = 53;
+            this.label16.Text = "N°:";
             // 
-            // label21
+            // tbx_numero
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Roboto Mono", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.DimGray;
-            this.label21.Location = new System.Drawing.Point(1079, 659);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(142, 28);
-            this.label21.TabIndex = 46;
-            this.label21.Text = "Descrição:";
+            this.tbx_numero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_numero.Location = new System.Drawing.Point(1466, 529);
+            this.tbx_numero.Name = "tbx_numero";
+            this.tbx_numero.Size = new System.Drawing.Size(76, 26);
+            this.tbx_numero.TabIndex = 52;
             // 
-            // txt_descricao
+            // label15
             // 
-            this.txt_descricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_descricao.Font = new System.Drawing.Font("Roboto Mono Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_descricao.Location = new System.Drawing.Point(1084, 690);
-            this.txt_descricao.Name = "txt_descricao";
-            this.txt_descricao.Size = new System.Drawing.Size(742, 186);
-            this.txt_descricao.TabIndex = 47;
-            this.txt_descricao.Text = "";
-            this.txt_descricao.TextChanged += new System.EventHandler(this.cbx_tipo_TextChanged);
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(1080, 531);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(50, 21);
+            this.label15.TabIndex = 51;
+            this.label15.Text = "Rua:";
             // 
-            // button1
+            // tbx_rua
             // 
-            this.button1.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1709, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 36);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "UPDATE";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.tbx_rua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_rua.Location = new System.Drawing.Point(1136, 529);
+            this.tbx_rua.Name = "tbx_rua";
+            this.tbx_rua.Size = new System.Drawing.Size(277, 26);
+            this.tbx_rua.TabIndex = 50;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Roboto Mono", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(1079, 487);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(142, 28);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "Endereço: ";
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1902, 991);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txt_descricao);
-            this.Controls.Add(this.label21);
+            this.ClientSize = new System.Drawing.Size(1902, 911);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.tbx_cidade);
             this.Controls.Add(this.label19);
@@ -789,6 +786,9 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.tbx_rua);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txt_descricao);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.cbx_ativo);
             this.Controls.Add(this.label13);
@@ -820,7 +820,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
-            this.MinimumSize = new System.Drawing.Size(1918, 1030);
+            this.MinimumSize = new System.Drawing.Size(1918, 950);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Clientes";
@@ -860,19 +860,6 @@
         private System.Windows.Forms.ComboBox cbx_ativo;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox tbx_rua;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox tbx_numero;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.MaskedTextBox mkx_cep;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox cbx_uf;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox tbx_bairro;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox tbx_cidade;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.RichTextBox txt_descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
@@ -893,6 +880,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cep;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox tbx_cidade;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox tbx_bairro;
+        private System.Windows.Forms.ComboBox cbx_uf;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.MaskedTextBox mkx_cep;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox tbx_numero;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox tbx_rua;
+        private System.Windows.Forms.Label label7;
     }
 }
 
