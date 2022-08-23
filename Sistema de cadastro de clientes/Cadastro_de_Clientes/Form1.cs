@@ -24,21 +24,15 @@ namespace Cadastro_de_Clientes
         {
             dataGridView1.Rows.Clear();
 
-            #region String Connection
-
             string strconnection = "Database=CLIENTES_DB;Server=127.0.0.1;Uid=root;Pwd=root;";
             MySqlConnection conn = new MySqlConnection(strconnection);
 
-            #endregion
-
-            #region SELECT
             try
             {
                 string query = "SELECT * FROM TB_CLIENTES;";
 
                 MySqlDataAdapter adapter = new MySqlDataAdapter(query, strconnection);
                 DataTable dt = new DataTable();
-
                 adapter.Fill(dt);
 
                 foreach (DataRow data in dt.Rows)
@@ -54,7 +48,6 @@ namespace Cadastro_de_Clientes
             {
                 conn.Close();
             }
-            #endregion
         }
 
         // 
@@ -63,19 +56,12 @@ namespace Cadastro_de_Clientes
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            #region string Connection
-
             string strconnection = "Database=CLIENTES_DB;Server=127.0.0.1;Uid=root;Pwd=root;";
             MySqlConnection conn = new MySqlConnection(strconnection);
-
-            #endregion
-
-            #region Insert
 
             try
             {
                 conn.Open();
-
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO TB_CLIENTES VALUES (NULL, '{tbx_nome.Text}', '{mkx_data_nacimento.Text}', '{tbx_email.Text}', '{tbx_cpf_cnpf.Text}', '{tbx_contato.Text}', '{cbx_sexo.Text}', CURRENT_TIMESTAMP(), '{cbx_tipo.Text}', '{cbx_ativo.Text}', '{tbx_cidade.Text}', '{tbx_bairro.Text}', '{tbx_rua.Text}', '{tbx_numero.Text}', '{cbx_uf.Text}', '{mkx_cep.Text}', '{txt_descricao.Text}');", conn);
                 cmd.ExecuteNonQuery();
 
@@ -89,9 +75,6 @@ namespace Cadastro_de_Clientes
             {
                 conn.Close();
             }
-
-            #endregion
-
             start_table();
         }
 
@@ -104,11 +87,11 @@ namespace Cadastro_de_Clientes
             if (string.IsNullOrEmpty(tbx_id.Text))
             {
                 dataGridView1.Rows.Clear();
-
-                DataTable dt = new DataTable();
-                string query = $"SELECT * FROM TB_CLIENTES WHERE CLIENTE_NOME = '{tbx_name_search.Text}';";
+                
+                string query = $"SELECT * FROM TB_CLIENTES WHERE CLIENTE_NOME LIKE '%{tbx_name_search.Text}%';";
 
                 MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(query, strconnection);
+                DataTable dt = new DataTable();
                 mySqlDataAdapter.Fill(dt);
 
                 foreach (DataRow data in dt.Rows)
@@ -120,13 +103,6 @@ namespace Cadastro_de_Clientes
             if(!string.IsNullOrEmpty(tbx_id.Text))
             {
                 dataGridView1.Rows.Clear();
-                #region String Connection
-
-                string strconnection = "Database=CLIENTES_DB;Server=127.0.0.1;Uid=root;Pwd=root;";
-                MySqlConnection conn = new MySqlConnection(strconnection);
-
-                #endregion
-
                 string query = $"SELECT * FROM TB_CLIENTES where ID_CLIENTE = '{tbx_id.Text}';";
 
                 DataTable dt = new DataTable();
@@ -137,11 +113,8 @@ namespace Cadastro_de_Clientes
                 {
                     dataGridView1.Rows.Add(data.ItemArray);
                 }
-
                 GetDataString();
-
             }
-
         }
 
         //
@@ -150,16 +123,12 @@ namespace Cadastro_de_Clientes
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-
-            MySqlConnection conn = new MySqlConnection(strconnection);
             string query = $"DELETE FROM TB_CLIENTES WHERE ID_CLIENTE = {tbx_id.Text}";
-
-            #region Delete
+            MySqlConnection conn = new MySqlConnection(strconnection);
 
             try
             {
                 conn.Open();
-
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
 
@@ -173,11 +142,7 @@ namespace Cadastro_de_Clientes
             {
                 conn.Close();
                 start_table();
-            }
-
-            #endregion
-
-            
+            }   
         }
 
         //
@@ -186,15 +151,11 @@ namespace Cadastro_de_Clientes
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-
             MySqlConnection conn = new MySqlConnection(strconnection);
 
             try
             {
                 conn.Open();
-
-                #region Query
-
                 string query = $"UPDATE TB_CLIENTES SET " +
                     $"CLIENTE_NOME = '{tbx_nome.Text}', " +
                     $"CLIENTE_IDADE = '{mkx_data_nacimento.Text}'," +
@@ -213,13 +174,11 @@ namespace Cadastro_de_Clientes
                     $" CLIENTE_DESCRICAO = '{txt_descricao.Text}'" +
                     $"WHERE ID_CLIENTE = {tbx_id.Text};";
 
-                #endregion
-
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
+
                 start_table();
                 MessageBox.Show("Atualizado com sucesso!");
-
             }
             catch (Exception ex)
             {
@@ -238,7 +197,6 @@ namespace Cadastro_de_Clientes
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-
             string query = $"SELECT * FROM TB_CLIENTES;";
             DataTable dt = new DataTable();
 
@@ -285,7 +243,6 @@ namespace Cadastro_de_Clientes
                 cbx_uf.Text = dr.GetString(14);
                 mkx_cep.Text = dr.GetString(15);
                 txt_descricao.Text = dr.GetString(16);
-
             }
             catch(Exception ex)
             {

@@ -34,9 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.btn_save = new System.Windows.Forms.Button();
-            this.btn_update = new System.Windows.Forms.Button();
-            this.btn_delete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,41 +92,11 @@
             this.label15 = new System.Windows.Forms.Label();
             this.tbx_rua = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_save
-            // 
-            this.btn_save.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Location = new System.Drawing.Point(74, 790);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(119, 56);
-            this.btn_save.TabIndex = 0;
-            this.btn_save.Text = "TO SAVE";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // btn_update
-            // 
-            this.btn_update.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.Location = new System.Drawing.Point(199, 790);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(117, 56);
-            this.btn_update.TabIndex = 1;
-            this.btn_update.Text = "EDITAR";
-            this.btn_update.UseVisualStyleBackColor = true;
-            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Location = new System.Drawing.Point(744, 790);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(130, 56);
-            this.btn_delete.TabIndex = 2;
-            this.btn_delete.Text = "DELETE";
-            this.btn_delete.UseVisualStyleBackColor = true;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // dataGridView1
             // 
@@ -532,7 +499,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(429, 712);
+            this.label12.Location = new System.Drawing.Point(487, 712);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(70, 21);
             this.label12.TabIndex = 27;
@@ -545,7 +512,7 @@
             this.cbx_tipo.Items.AddRange(new object[] {
             "Física ",
             "Jurídica "});
-            this.cbx_tipo.Location = new System.Drawing.Point(505, 710);
+            this.cbx_tipo.Location = new System.Drawing.Point(563, 710);
             this.cbx_tipo.Name = "cbx_tipo";
             this.cbx_tipo.Size = new System.Drawing.Size(101, 28);
             this.cbx_tipo.TabIndex = 28;
@@ -557,7 +524,7 @@
             this.cbx_ativo.Items.AddRange(new object[] {
             "Ativo",
             "Não ativo"});
-            this.cbx_ativo.Location = new System.Drawing.Point(746, 710);
+            this.cbx_ativo.Location = new System.Drawing.Point(804, 710);
             this.cbx_ativo.Name = "cbx_ativo";
             this.cbx_ativo.Size = new System.Drawing.Size(70, 28);
             this.cbx_ativo.TabIndex = 30;
@@ -566,7 +533,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(670, 712);
+            this.label13.Location = new System.Drawing.Point(728, 712);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(70, 21);
             this.label13.TabIndex = 29;
@@ -588,7 +555,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Roboto Mono", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.DimGray;
-            this.label21.Location = new System.Drawing.Point(1079, 620);
+            this.label21.Location = new System.Drawing.Point(69, 752);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(142, 28);
             this.label21.TabIndex = 46;
@@ -598,9 +565,9 @@
             // 
             this.txt_descricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_descricao.Font = new System.Drawing.Font("Roboto Mono Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_descricao.Location = new System.Drawing.Point(1088, 660);
+            this.txt_descricao.Location = new System.Drawing.Point(74, 783);
             this.txt_descricao.Name = "txt_descricao";
-            this.txt_descricao.Size = new System.Drawing.Size(742, 186);
+            this.txt_descricao.Size = new System.Drawing.Size(800, 116);
             this.txt_descricao.TabIndex = 47;
             this.txt_descricao.Text = "";
             this.txt_descricao.TextChanged += new System.EventHandler(this.cbx_tipo_TextChanged);
@@ -767,12 +734,45 @@
             this.label7.TabIndex = 49;
             this.label7.Text = "Endereço: ";
             // 
+            // btn_delete
+            // 
+            this.btn_delete.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Location = new System.Drawing.Point(1696, 843);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(130, 56);
+            this.btn_delete.TabIndex = 64;
+            this.btn_delete.Text = "DELETE";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            // 
+            // btn_update
+            // 
+            this.btn_update.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update.Location = new System.Drawing.Point(1213, 843);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(117, 56);
+            this.btn_update.TabIndex = 63;
+            this.btn_update.Text = "EDITAR";
+            this.btn_update.UseVisualStyleBackColor = true;
+            // 
+            // btn_save
+            // 
+            this.btn_save.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.Location = new System.Drawing.Point(1088, 843);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(119, 56);
+            this.btn_save.TabIndex = 62;
+            this.btn_save.Text = "TO SAVE";
+            this.btn_save.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1902, 911);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_update);
+            this.Controls.Add(this.btn_save);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.tbx_cidade);
             this.Controls.Add(this.label19);
@@ -814,9 +814,6 @@
             this.Controls.Add(this.tbx_id);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btn_delete);
-            this.Controls.Add(this.btn_update);
-            this.Controls.Add(this.btn_save);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
@@ -831,10 +828,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_save;
-        private System.Windows.Forms.Button btn_update;
-        private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.TextBox tbx_id;
@@ -893,6 +886,9 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox tbx_rua;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_save;
     }
 }
 
