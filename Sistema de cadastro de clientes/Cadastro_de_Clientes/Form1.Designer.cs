@@ -52,7 +52,6 @@
             this.uf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_search = new System.Windows.Forms.Button();
             this.tbx_id = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbx_name_search = new System.Windows.Forms.TextBox();
@@ -78,7 +77,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.txt_descricao = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.tbx_cidade = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -92,6 +90,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.tbx_rua = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_search = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
@@ -103,6 +103,7 @@
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -310,30 +311,19 @@
             this.descricao.MinimumWidth = 99;
             this.descricao.Name = "descricao";
             // 
-            // btn_search
-            // 
-            this.btn_search.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.Location = new System.Drawing.Point(1603, 17);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(100, 43);
-            this.btn_search.TabIndex = 4;
-            this.btn_search.Text = "SEARCH";
-            this.btn_search.UseVisualStyleBackColor = true;
-            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
-            // 
             // tbx_id
             // 
             this.tbx_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_id.Location = new System.Drawing.Point(1551, 26);
+            this.tbx_id.Location = new System.Drawing.Point(1719, 33);
             this.tbx_id.Name = "tbx_id";
-            this.tbx_id.Size = new System.Drawing.Size(46, 26);
+            this.tbx_id.Size = new System.Drawing.Size(52, 26);
             this.tbx_id.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1515, 29);
+            this.label1.Location = new System.Drawing.Point(1683, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 21);
             this.label1.TabIndex = 6;
@@ -342,16 +332,16 @@
             // tbx_name_search
             // 
             this.tbx_name_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_name_search.Location = new System.Drawing.Point(1088, 27);
+            this.tbx_name_search.Location = new System.Drawing.Point(1210, 33);
             this.tbx_name_search.Name = "tbx_name_search";
-            this.tbx_name_search.Size = new System.Drawing.Size(421, 26);
+            this.tbx_name_search.Size = new System.Drawing.Size(467, 26);
             this.tbx_name_search.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1032, 29);
+            this.label2.Location = new System.Drawing.Point(1154, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 21);
             this.label2.TabIndex = 8;
@@ -555,7 +545,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Roboto Mono", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.DimGray;
-            this.label21.Location = new System.Drawing.Point(69, 752);
+            this.label21.Location = new System.Drawing.Point(1079, 630);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(142, 28);
             this.label21.TabIndex = 46;
@@ -565,23 +555,12 @@
             // 
             this.txt_descricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_descricao.Font = new System.Drawing.Font("Roboto Mono Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_descricao.Location = new System.Drawing.Point(74, 783);
+            this.txt_descricao.Location = new System.Drawing.Point(1083, 661);
             this.txt_descricao.Name = "txt_descricao";
-            this.txt_descricao.Size = new System.Drawing.Size(800, 116);
+            this.txt_descricao.Size = new System.Drawing.Size(743, 238);
             this.txt_descricao.TabIndex = 47;
             this.txt_descricao.Text = "";
             this.txt_descricao.TextChanged += new System.EventHandler(this.cbx_tipo_TextChanged);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1709, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 43);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "UPDATE";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label20
             // 
@@ -734,34 +713,56 @@
             this.label7.TabIndex = 49;
             this.label7.Text = "Endereço: ";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Roboto Mono Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::Cadastro_de_Clientes.Properties.Resources.reload_update_refresh_icon_143703;
+            this.button1.Location = new System.Drawing.Point(1845, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(45, 43);
+            this.button1.TabIndex = 48;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_search
+            // 
+            this.btn_search.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search.Image = global::Cadastro_de_Clientes.Properties.Resources.lupa;
+            this.btn_search.Location = new System.Drawing.Point(1794, 23);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(45, 43);
+            this.btn_search.TabIndex = 4;
+            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
             // btn_delete
             // 
             this.btn_delete.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Location = new System.Drawing.Point(1696, 843);
+            this.btn_delete.Image = global::Cadastro_de_Clientes.Properties.Resources.delete;
+            this.btn_delete.Location = new System.Drawing.Point(256, 814);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(130, 56);
-            this.btn_delete.TabIndex = 64;
-            this.btn_delete.Text = "DELETE";
+            this.btn_delete.Size = new System.Drawing.Size(85, 85);
+            this.btn_delete.TabIndex = 67;
             this.btn_delete.UseVisualStyleBackColor = true;
             // 
             // btn_update
             // 
             this.btn_update.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.Location = new System.Drawing.Point(1213, 843);
+            this.btn_update.Image = global::Cadastro_de_Clientes.Properties.Resources.editdocument;
+            this.btn_update.Location = new System.Drawing.Point(165, 814);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(117, 56);
-            this.btn_update.TabIndex = 63;
-            this.btn_update.Text = "EDITAR";
+            this.btn_update.Size = new System.Drawing.Size(85, 85);
+            this.btn_update.TabIndex = 66;
             this.btn_update.UseVisualStyleBackColor = true;
             // 
             // btn_save
             // 
             this.btn_save.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Location = new System.Drawing.Point(1088, 843);
+            this.btn_save.Image = global::Cadastro_de_Clientes.Properties.Resources.save;
+            this.btn_save.Location = new System.Drawing.Point(74, 814);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(119, 56);
-            this.btn_save.TabIndex = 62;
-            this.btn_save.Text = "TO SAVE";
+            this.btn_save.Size = new System.Drawing.Size(85, 85);
+            this.btn_save.TabIndex = 65;
             this.btn_save.UseVisualStyleBackColor = true;
             // 
             // Form1
@@ -821,6 +822,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Clientes";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
