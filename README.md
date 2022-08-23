@@ -1,7 +1,9 @@
 ## Sistema de cadastro de clientes 
 
 
+Banco de dados feito em MySQL
 
+- ID
 - NOME 
 - IDADE
 - EMAIL 
