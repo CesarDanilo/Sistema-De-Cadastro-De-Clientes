@@ -1,7 +1,8 @@
 ## Sistema de cadastro de clientes 
 
+Banco de dados MySQL
 
-Banco de dados feito em MySQL
+### Dados da tabela de cadastro
 
 - ID
 - NOME 
