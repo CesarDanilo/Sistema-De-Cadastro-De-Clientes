@@ -142,31 +142,7 @@ namespace Cadastro_de_Clientes
 
         } // ATUALIZAR TABELA
 
-        private void btn_delete_Click_1(object sender, EventArgs e)
-        {
-            string query = $"DELETE FROM TB_CLIENTES WHERE ID_CLIENTE = {tbx_id.Text}";
-            MySqlConnection conn = new MySqlConnection(strconnection);
-
-            try
-            {
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Deletado com Sucesso!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-                start_table();
-            }
-        }
-
-        private void btn_save_Click_1(object sender, EventArgs e)
+        private void btn_save_Click(object sender, EventArgs e)
         {
             string strconnection = "Database=CLIENTES_DB;Server=127.0.0.1;Uid=root;Pwd=root;";
             MySqlConnection conn = new MySqlConnection(strconnection);
@@ -189,9 +165,10 @@ namespace Cadastro_de_Clientes
                 conn.Close();
             }
             start_table();
+
         }
 
-        private void btn_update_Click_1(object sender, EventArgs e)
+        private void btn_update_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection(strconnection);
 
@@ -230,12 +207,36 @@ namespace Cadastro_de_Clientes
             {
                 conn.Close();
             }
+
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            string query = $"DELETE FROM TB_CLIENTES WHERE ID_CLIENTE = {tbx_id.Text}";
+            MySqlConnection conn = new MySqlConnection(strconnection);
+
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Deletado com Sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+                start_table();
+            }
         }
 
         private void cbx_tipo_TextChanged(object sender, EventArgs e)
         {
 
         }
-
     }
 }

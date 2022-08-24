@@ -514,16 +514,16 @@
             this.cbx_ativo.Items.AddRange(new object[] {
             "Ativo",
             "Não ativo"});
-            this.cbx_ativo.Location = new System.Drawing.Point(804, 710);
+            this.cbx_ativo.Location = new System.Drawing.Point(770, 710);
             this.cbx_ativo.Name = "cbx_ativo";
-            this.cbx_ativo.Size = new System.Drawing.Size(70, 28);
+            this.cbx_ativo.Size = new System.Drawing.Size(104, 28);
             this.cbx_ativo.TabIndex = 30;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(728, 712);
+            this.label13.Location = new System.Drawing.Point(694, 712);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(70, 21);
             this.label13.TabIndex = 29;
@@ -744,6 +744,7 @@
             this.btn_delete.Size = new System.Drawing.Size(85, 85);
             this.btn_delete.TabIndex = 67;
             this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_update
             // 
@@ -754,6 +755,7 @@
             this.btn_update.Size = new System.Drawing.Size(85, 85);
             this.btn_update.TabIndex = 66;
             this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_save
             // 
@@ -764,13 +766,14 @@
             this.btn_save.Size = new System.Drawing.Size(85, 85);
             this.btn_save.TabIndex = 65;
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1902, 911);
+            this.ClientSize = new System.Drawing.Size(1902, 991);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_save);
@@ -818,7 +821,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
-            this.MinimumSize = new System.Drawing.Size(1918, 950);
+            this.MinimumSize = new System.Drawing.Size(1918, 1030);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Clientes";
