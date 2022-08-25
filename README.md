@@ -20,3 +20,11 @@
  git clone https://github.com/CesarDanilo/Sistema-De-Cadastro-De-Clientes.git
 
 ```
+
+### <i> Aplicativo
+- Caminho do Aplicativo
+
+> Sistema-De-Cadastro-De-Clientes\Sistema de cadastro de clientes\Cadastro_de_Clientes\bin\Release\Cadastro_de_Clientes
+
+> Desabilitar o Antivirus 
+
