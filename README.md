@@ -26,5 +26,5 @@
 
 > Sistema de cadastro de clientes\Cadastro_de_Clientes\bin\Release\Cadastro_de_Clientes
 
-> Desabilitar o Antivirus 
+> Desabilitar o Antivirus 🔥
 
