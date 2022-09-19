@@ -165,7 +165,6 @@ namespace Cadastro_de_Clientes
                 conn.Close();
             }
             start_table();
-
         }
 
         private void btn_update_Click(object sender, EventArgs e)
@@ -207,7 +206,6 @@ namespace Cadastro_de_Clientes
             {
                 conn.Close();
             }
-
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
